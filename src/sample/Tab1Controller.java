@@ -17,9 +17,10 @@ public class Tab1Controller implements Initializable{
 	 @FXML private Button btn1;
 	 @FXML private Tab2Controller tab2contentController;
 	 @FXML private Label lbl_2;
+
 	 
 	 private int counter=0;
-	 
+
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 
@@ -45,4 +46,14 @@ public class Tab1Controller implements Initializable{
 		counter++;
 		lbl_1.setText(""+counter);
 	}
+	public  void  run_a_loop(){
+		int i =1;
+		while (i<5){
+			System.out.println(i*7 + " i");
+			i++;
+		}
+
+	}
+
+
 }
