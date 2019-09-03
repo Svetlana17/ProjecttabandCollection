@@ -15,11 +15,23 @@
                   <fx:include fx:id="tab1content" source="tab1.fxml" />
                </content>
           </Tab>
+
+
           <Tab fx:id="tab2" text="Tab 2">
                <content>
                   <fx:include fx:id="tab2content" source="tab2.fxml" />
                </content>
           </Tab>
+
+
+            <Tab fx:id="tab3" text="Tab 3">
+                <content>
+
+                </content>
+            </Tab>
+
+
+
         </tabs>
       </TabPane>
    </children>

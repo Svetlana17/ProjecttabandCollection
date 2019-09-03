@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import java.lang.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="pane" prefHeight="224.0" prefWidth="307.0" xmlns="http://javafx.com/javafx/8"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Tab2Controller">
+<AnchorPane fx:id="pane" prefHeight="342.0" prefWidth="424.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Tab2Controller">
    <children>
-      <Label fx:id="lbl_2" layoutX="125.0" layoutY="57.0" text="not clicked" />
-      <Button fx:id="btn2" layoutX="103.0" layoutY="100.0" mnemonicParsing="false"
-              onAction="#resetCounter1" text="Reset Counter 1" />
+      <Label fx:id="lbl_2" layoutX="203.0" layoutY="18.0" text="not clicked" />
+      <Button fx:id="btn2" layoutX="75.0" layoutY="14.0" mnemonicParsing="false" onAction="#resetCounter1" text="Reset Counter 1" />
+      <Button fx:id="bt_hello" layoutX="14.0" layoutY="14.0" onAction="#hello" text="Hello" />
+      <PieChart fx:id="pichart" layoutX="45.0" layoutY="56.0" prefHeight="247.0" prefWidth="335.0" />
    </children>
 </AnchorPane>

@@ -2,6 +2,7 @@ package sample;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 
@@ -12,10 +13,13 @@ public class MainController implements Initializable{
 	
 	@FXML private Tab tab1;
 	@FXML private Tab tab2;
+	@FXML private Tab tab3;
 	@FXML private TabPane pane;
 	@FXML public  Tab1Controller tab1contentController;
 	@FXML public Tab2Controller tab2contentController;
-	
+
+	@FXML public  ControllerPieChart controllerPieChart;
+    @FXML public Button bt;
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
@@ -26,8 +30,13 @@ public class MainController implements Initializable{
             } else if (newTab == tab2) {
                 tab2contentController.addViewCounter();
             }
+
+
         });
+
+
 	}
+
 	
 	
 
