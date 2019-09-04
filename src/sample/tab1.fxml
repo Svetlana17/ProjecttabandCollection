@@ -1,52 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="283.0" prefWidth="541.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Tab1Controller">
+
+<Pane xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Tab1Controller">
    <children>
-
-      <MenuBar prefHeight="283.0" prefWidth="541.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <menus>
-            <Menu mnemonicParsing="true" text="_File">
-               <items>
-                  <MenuItem mnemonicParsing="true" onAction="#print" text="_New Project" />
-                  <MenuItem mnemonicParsing="true" onAction="#read" text="_Open…" />
-                  <MenuItem mnemonicParsing="false" text="Quit" />
-               </items>
-
-            </Menu>
-            <Menu mnemonicParsing="true" text="Open">
-               <items>
-                  <MenuItem mnemonicParsing="true" text="cvg" />
-                  <MenuItem mnemonicParsing="true" text="txt…" />
-                  <MenuItem mnemonicParsing="false" text="exsel" />
-               </items>
-            </Menu>
-            <Menu mnemonicParsing="true" text="Dowloand">
-               <items>
-                  <MenuItem mnemonicParsing="true" text="_New Project" />
-                  <MenuItem mnemonicParsing="true" text="_Open…" />
-                  <MenuItem mnemonicParsing="false" text="Quit" />
-               </items>
-            </Menu>
-         </menus>
-      </MenuBar>
+      <AnchorPane layoutX="2.0" prefHeight="339.0" prefWidth="724.0">
+         <children>
+            <AnchorPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <AnchorPane>
+                     <children>
+                  
+                        <MenuBar prefHeight="340.0" prefWidth="717.0">
+                           <menus>
+                              <Menu mnemonicParsing="true" text="_File">
+                                 <items>
+                                    <MenuItem mnemonicParsing="true" onAction="#print" text="_New Project" />
+                                    <MenuItem mnemonicParsing="true" onAction="#read" text="_Read…" />
+                                    <MenuItem mnemonicParsing="false" onAction="#open" text="_Open" />
+                                 </items>
+                  
+                              </Menu>
+                              <Menu mnemonicParsing="true" text="Open">
+                                 <items>
+                                    <MenuItem mnemonicParsing="true" text="cvg" />
+                                    <MenuItem mnemonicParsing="true" text="txt…" />
+                                    <MenuItem mnemonicParsing="false" text="exsel" />
+                                 </items>
+                              </Menu>
+                              <Menu mnemonicParsing="true" text="Dowloand">
+                                 <items>
+                                    <MenuItem mnemonicParsing="true" text="_New Project" />
+                                    <MenuItem mnemonicParsing="true" onAction="#open" text="_Open…">
+                  </MenuItem>
+                                    <MenuItem mnemonicParsing="false" text="Quit" />
+                                 </items>
+                              </Menu>
+                           </menus>
+                        </MenuBar>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            
+            <Label fx:id="lbl_1" layoutX="123.0" layoutY="37.0" text="0" />
       
-      <Label fx:id="lbl_1" layoutX="123.0" layoutY="37.0" text="0" />
-      <Button fx:id="btn1" layoutX="116.0" layoutY="244.0" mnemonicParsing="false" onAction="#resetCounter2" prefHeight="25.0" prefWidth="129.0" text="Reset Counter 2" />
-
-      <Label fx:id="lbl_2" layoutX="20.0" layoutY="37.0" text="Metka" />
-      <Text fx:id="tx" layoutX="20.0" layoutY="67.0" text="Test" />
-      <Button layoutX="255.0" layoutY="244.0" mnemonicParsing="false" onAction="#run_a_loop" prefHeight="25.0" prefWidth="129.0" text="Выполнить цикл" />
-      <Button layoutX="341.0" layoutY="199.0" mnemonicParsing="false" onAction="#run_a_loop" prefHeight="25.0" prefWidth="129.0" text="Operationable" />
-
-      <Button fx:id="btn1ex" layoutX="398.0" layoutY="244.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="129.0" text="вывести результат лямда" />
-
+            <Label fx:id="lbl_2" layoutX="20.0" layoutY="37.0" text="Metka" />
+            <Text fx:id="tx" layoutX="20.0" layoutY="67.0" text="Test" />
+            <AnchorPane layoutX="-2.0" layoutY="85.0">
+               <children>
+         </children>
+            </AnchorPane>
+            <HBox prefHeight="100.0" prefWidth="717.0" AnchorPane.topAnchor="240.0">
+               <children>
+            
+                  <Button fx:id="btn1ex" mnemonicParsing="false" prefHeight="25.0" prefWidth="175.0" text="вывести результат лямда">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#run_a_loop" prefHeight="25.0" prefWidth="129.0" text="Выполнить цикл">
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#run_a_loop" prefHeight="25.0" prefWidth="129.0" text="Operationable">
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btn1" mnemonicParsing="false" onAction="#resetCounter2" prefHeight="25.0" prefWidth="129.0" text="Reset Counter 2">
+                     <HBox.margin>
+                        <Insets left="50.0" right="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+           
+      
+         </children>
+      </AnchorPane>
    </children>
-</AnchorPane>
+</Pane>

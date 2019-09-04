@@ -14,11 +14,11 @@ import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
 
 import java.awt.*;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.awt.TextArea;
+import java.io.*;
 import java.net.URL;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -31,8 +31,8 @@ public class Tab1Controller implements Initializable{
 	 @FXML private Label lbl_2;
 	 Operationable operationable;
 
-	private Desktop desktop = Desktop.getDesktop();
-
+	 private Desktop desktop = Desktop.getDesktop();
+     @FXML private TextArea tarea;
 
 ////
 
@@ -106,6 +106,8 @@ public class Tab1Controller implements Initializable{
 			while((c=reader.read())!=-1){
 
 				System.out.print((char)c);
+
+
 			}
 		}
 		catch(IOException ex){
@@ -113,9 +115,7 @@ public class Tab1Controller implements Initializable{
 		}
 	}
 
-	public  void open(ActionEvent actionEvent)
-	{
-
+	public  void open(ActionEvent actionEvent) throws IOException {
 
 	}
 

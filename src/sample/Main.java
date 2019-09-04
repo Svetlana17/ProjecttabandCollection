@@ -20,10 +20,10 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) {
         try {
-            loader = new FXMLLoader(getClass().getResource("Main.fxml"));
+            loader = new FXMLLoader(getClass().getResource("test.fxml"));
             Parent root = loader.load();
           //  Scene scene = new Scene(root);
-            Scene scene = new Scene(root, 650, 400, Color.WHITE);
+            Scene scene = new Scene(root, 600, 400, Color.WHITE);
             scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
             scene.getStylesheets().add((getClass().getResource("/css/color.css")).toExternalForm());
          primaryStage.setTitle("Hello World");
